@@ -1,0 +1,19 @@
+
+
+
+select{
+    width: 300px;
+    border-radius: .7em;
+    text-align: center;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color:rgba(245, 231, 231, 0.31);
+    font-weight: bold;
+    font-size: large;
+}
+
+option{
+    text-align: center;
+    font-weight: bold;
+}

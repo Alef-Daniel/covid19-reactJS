@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+
+import { useEffect, useState } from 'react';
+
+import Card from './components/Card/Card.js';
+import api from './service/api';
+import Select from './components/Select/Select.js';
+
 import './App.css';
 
+
 function App() {
+  
+  const [casos, setCasos] = useState([])
+  const [select, setSelect] = useState("World")
+
+  
+  useEffect(()=>{
+    api.get(select).then(({data})=>{
+      setCasos(data);
+    })
+  }, [select]);
+
+ 
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Select setValue={setSelect} />
+      <div className='card'>
+      <Card casos={casos}/>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;

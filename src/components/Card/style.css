@@ -1,0 +1,26 @@
+.container{
+    background-color: rgba(245, 231, 231, 0.31);
+    width: 400px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px black;
+}
+
+.info p{
+    margin-top: 35px;
+    text-align: center;
+    font-size: larger;
+    font-style: italic;
+    font-weight: bold;   
+    color: aliceblue; 
+}   
+
+.title{
+    padding-top: 5px;
+    padding-left: 170px;
+    color: aliceblue;
+}
+
+*{
+    font-family: sans-serif;
+}
